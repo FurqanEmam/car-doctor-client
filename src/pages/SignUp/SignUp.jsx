@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import login from "../../assets/images/login/login.svg";
-const Login = () => {
-  const handleLogin = (event) => {
+const SignUp = () => {
+  const handleSignUp = (event) => {
     event.preventDefault();
   };
   return (
@@ -11,8 +11,8 @@ const Login = () => {
           <img src={login} alt="" />
         </div>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <h1 className="text-5xl font-bold text-center">Login</h1>
-          <form onSubmit={handleLogin} className="card-body">
+          <h1 className="text-5xl font-bold my-2 text-center">Sign Up</h1>
+          <form onSubmit={handleSignUp} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -43,14 +43,14 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn btn-primary">Sign Up</button>
             </div>
           </form>
           <div>
             <p className="my-4 text-center">
-              New to Car Doctor
-              <Link className="text-orange-600 font-bold" to="/signup">
-                Sign Up
+              Already Have an Account?
+              <Link className="text-orange-600 font-bold ms-1" to="/signin">
+                Sign In
               </Link>
             </p>
           </div>
@@ -60,4 +60,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
